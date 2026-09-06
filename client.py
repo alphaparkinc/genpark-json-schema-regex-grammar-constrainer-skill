@@ -51,14 +51,12 @@ class JSONSchemaGrammarCompilerClient:
                 rules.append(f'{rule_name} ::= "\"" "{prop_name}" "\"" ws ":" ws {val_rule}')
                 obj_subrules.append(rule_name)
 
-            # Object construction
             prop_chain = ' ws "," ws '.join(obj_subrules)
             rules.append(f'{root_rule} ::= "{{" ws {prop_chain} ws "}}"')
         else:
             rules.append(f'{root_rule} ::= string')
 
-        return "
-".join(rules)
+        return chr(10).join(rules)
 
     def validate_payload_against_schema(self, payload: Dict[str, Any], schema: Dict[str, Any]) -> Dict[str, Any]:
         """Verifies whether dictionary conforms to schema specifications."""
