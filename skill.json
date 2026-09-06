@@ -1,0 +1,16 @@
+{
+  "name": "genpark-json-schema-regex-grammar-constrainer-skill",
+  "version": "1.0.0",
+  "description": "Compiles JSON schemas into Context-Free Grammar (GBNF) rules for guaranteed deterministic LLM tool calling.",
+  "author": "GenPark AI",
+  "license": "MIT",
+  "keywords": [
+    "grammar",
+    "gbnf",
+    "json-schema",
+    "structured-output",
+    "outlines",
+    "genpark",
+    "mcp"
+  ]
+}
